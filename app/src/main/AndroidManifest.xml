@@ -41,7 +41,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".TransactionHistory" />
+        <activity android:name=".TransactionHistory"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".RequestMoney"
             android:parentActivityName=".MainActivity"

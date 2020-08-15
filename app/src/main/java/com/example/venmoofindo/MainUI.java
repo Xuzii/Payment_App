@@ -91,6 +91,11 @@ public class MainUI extends AppCompatActivity implements NavigationView.OnNaviga
                 startActivity(intent);
                 break;
             }
+            case R.id.transaction_history: {
+                intent = new Intent(this, TransactionHistory.class);
+                startActivity(intent);
+                break;
+            }
         }
         //close navigation drawer
         drawer.closeDrawer(GravityCompat.START);

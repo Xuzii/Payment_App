@@ -9,15 +9,14 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
+import com.amplifyframework.AmplifyException;
+import com.amplifyframework.auth.AuthUserAttributeKey;
+import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
+import com.amplifyframework.auth.options.AuthSignUpOptions;
+import com.amplifyframework.core.Amplify;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Login extends AppCompatActivity {
 
@@ -35,6 +34,24 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
+
+        try {
+            Amplify.addPlugin(new AWSCognitoAuthPlugin());
+            Amplify.configure(getApplicationContext());
+
+
+            Log.i("MyAmplifyApp", "Initialized Amplify");
+        } catch (AmplifyException error) {
+            Log.e("MyAmplifyApp", "Could not initialize Amplify", error);
+        }
+
+//        Amplify.Auth.fetchAuthSession(
+//                result -> Log.i("AmplifyQuickstart", result.toString()),
+//                error -> Log.e("AmplifyQuickstart", error.toString())
+//        );
+//
+
+
         usernameText = (EditText) findViewById(R.id.Enter_email);
         passwordText = (EditText) findViewById(R.id.Enter_password);
 
@@ -43,49 +60,37 @@ public class Login extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginRequest();
+                username = usernameText.getText().toString();
+                password = passwordText.getText().toString();
+                loginRequest(username, password);
+
             }
         });
+//
+//        queue = Volley.newRequestQueue(this);
 
-        queue = Volley.newRequestQueue(this);
+    }
+
+    public void loginRequest(String username, String password){
+//        AtomicBoolean signIn = new AtomicBoolean(false);
+//        Amplify.Auth.signIn(
+//                username,
+//                password,
+//                result -> signIn.set(result.isSignInComplete()),
+//                error -> Log.e("AuthQuickstart", error.toString())
+//        );
+//
+//        if(signIn.get()){
+//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//            startActivity(intent);
+//        } else {
+//            // TODO: Tell user invalid login
+//        }
 
     }
 
 
-    public void loginRequest() {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>()
-                {
-                    @Override
-                    public void onResponse(String response) {
-                        Intent intent = new Intent(this, MainActivity.class);
-                        intent
 
-                        Log.i("Login", "User has succesfully Logged in");
-                        Log.d("Response", response);
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // error
-                        Log.d("Volley", "status code" + error.networkResponse.statusCode);
-                    }
-                }
-        ) {
-            @Override
-            protected Map<String, String> getParams()
-            {
-                Map<String, String>  params = new HashMap<String, String>();
-                params.put("username", username);
-                params.put("password", password);
-
-                return params;
-            }
-        };
-        queue.add(postRequest);
-    }
 
 
 }

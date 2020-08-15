@@ -27,7 +27,7 @@
             android:textColor="#72D8CC"
             android:translationX="30px"
             android:translationY="20px"
-            app:layout_constraintBottom_toTopOf="@+id/Email"
+            app:layout_constraintBottom_toTopOf="@+id/firstName"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
             app:layout_constraintTop_toTopOf="@+id/parent" />
@@ -43,7 +43,7 @@
             app:layout_constraintBottom_toTopOf="@+id/Enter_name"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome" />
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_title" />
 
         <EditText
             android:id="@+id/Enter_name"
@@ -53,10 +53,10 @@
             android:inputType="text"
             android:text="First Name"
             android:translationX="40px"
-            app:layout_constraintBottom_toTopOf="@+id/Password"
+            app:layout_constraintBottom_toTopOf="@+id/lastName"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/Email" />
+            app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
         <TextView
             android:id="@+id/lastName"
@@ -118,10 +118,10 @@
             android:paddingTop="20dp"
             android:text="Phone Number"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Enter_email"
+            app:layout_constraintBottom_toTopOf="@+id/Enter_phone"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/Enter_lastName" />
+            app:layout_constraintTop_toBottomOf="@+id/Enter_email" />
 
         <EditText
             android:id="@+id/Enter_phone"

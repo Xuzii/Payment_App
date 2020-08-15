@@ -72,20 +72,22 @@ public class Login extends AppCompatActivity {
     }
 
     public void loginRequest(String username, String password){
-//        AtomicBoolean signIn = new AtomicBoolean(false);
-//        Amplify.Auth.signIn(
-//                username,
-//                password,
-//                result -> signIn.set(result.isSignInComplete()),
-//                error -> Log.e("AuthQuickstart", error.toString())
-//        );
-//
-//        if(signIn.get()){
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-//        } else {
-//            // TODO: Tell user invalid login
-//        }
+        AtomicBoolean signIn = new AtomicBoolean(false);
+        Amplify.Auth.signIn(
+                username,
+                password,
+                result -> signIn.set(result.isSignInComplete()),
+                error -> Log.e("AuthQuickstart", error.toString())
+        );
+
+        Log.i("AuthQuickstart", "" + signIn.get());
+        if(signIn.get()){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+        } else {
+            // TODO: Tell user invalid login
+        }
+
 
     }
 

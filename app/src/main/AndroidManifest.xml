@@ -11,25 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".AccountInformation"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
-        <activity android:name=".EnterInitialBankAccount">
-        </activity>
+        <activity android:name=".Settings"></activity>
+        <activity
+            android:name=".FriendList"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".AccountInformation"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".EnterInitialBankAccount"></activity>
         <activity android:name=".SignUp2" />
         <activity
             android:name=".MainUI"
             android:theme="@style/AppTheme.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".LoginUITest">
-        </activity>
+        <activity android:name=".LoginUITest" />
         <activity android:name=".SignUp" />
         <activity
             android:name=".SendMoney"
@@ -41,9 +43,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".TransactionHistory"
+        <activity
+            android:name=".TransactionHistory"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".RequestMoney"
             android:parentActivityName=".MainActivity"

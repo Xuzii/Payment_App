@@ -26,7 +26,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#72D8CC"
             android:translationX="30px"
-            android:translationY="20px" />
+            android:translationY="20px"
+            app:layout_constraintBottom_toTopOf="@+id/Email"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintTop_toTopOf="@+id/parent"/>
 
         <TextView
             android:id="@+id/Email"
@@ -35,18 +39,24 @@
             android:text="Email"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintBottom_toTopOf="@+id/Enter_email"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"/>
 
         <EditText
             android:id="@+id/Enter_email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_constraintEnd_toEndOf="parent"
-            android:layout_constraintStart_toStartOf="parent"
             android:ems="10"
             android:inputType="text|textEmailAddress"
             android:text="Name"
-            android:translationX="40px" />
+            android:translationX="40px"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintBottom_toTopOf="@+id/Password"
+            app:layout_constraintTop_toBottomOf="@+id/Email"/>
 
         <TextView
             android:id="@+id/Password"
@@ -55,7 +65,11 @@
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
             android:text="Password"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintBottom_toTopOf="@+id/Enter_password"
+            app:layout_constraintTop_toBottomOf="@+id/Enter_email"/>
 
         <EditText
             android:id="@+id/Enter_password"
@@ -64,7 +78,11 @@
             android:ems="10"
             android:inputType="textWebPassword"
             android:text="Name"
-            android:translationX="40px" />
+            android:translationX="40px"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintBottom_toTopOf="@+id/login_button"
+            app:layout_constraintTop_toBottomOf="@+id/Password"/>
 
         <Button
             android:id="@+id/login_button"
@@ -75,7 +93,11 @@
             android:layout_gravity="end"
             android:layout_marginRight="80px"
             android:layout_marginTop="30px"
-            android:text="Login"/>
+            android:text="Login"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/Enter_password"/>
 
         <TextView
             android:id="@+id/textView5"
@@ -83,7 +105,12 @@
             android:layout_height="wrap_content"
             android:text="Don't have an account yet? \n Sign up here"
             android:textAlignment="center"
-            android:layout_marginTop="35dp"/>
+            android:layout_marginTop="35dp"
+            app:layout_constraintEnd_toEndOf="@+id/parent"
+            app:layout_constraintStart_toStartOf="@+id/parent"
+            app:layout_constraintBottom_toBottomOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_button"
+            />
     </LinearLayout>
 
     <TextView

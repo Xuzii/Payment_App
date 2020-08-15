@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SendMoney">
+    tools:context=".RequestMoney">
 
     <TextView
         android:id="@+id/textView"
@@ -13,10 +13,10 @@
         android:background="@drawable/side_nav_bar"
         android:gravity="bottom"
         android:paddingBottom="10dp"
-        android:text="Send Money"
+        android:text="Request Money"
+        android:paddingLeft="55dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#FFFFFF"
-        android:paddingLeft="80dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -109,7 +109,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
+        android:text="Submit Request"
         android:paddingRight="20dp"
         android:paddingLeft="20dp"
         android:background="@drawable/rounded_corners"
@@ -126,7 +126,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 
 

@@ -5,13 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:title="Home"/>
+            android:id="@+id/account_info"
+            android:icon="@drawable/person"
+            android:title="Account Info"/>
         <item
-            android:id="@+id/nav_gallery"
-            android:title="Gallery"/>
+            android:id="@+id/transaction_history"
+            android:icon="@drawable/history"
+            android:title="Transaction History"/>
         <item
-            android:id="@+id/nav_slideshow"
-            android:title="Slideshow"/>
+            android:id="@+id/friends_list"
+            android:icon="@drawable/friends"
+            android:title="Friends List"/>
+        <item
+            android:id="@+id/companies_list"
+            android:icon="@drawable/business"
+            android:title="Company List"/>
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/settings"
+            android:title="Settings"/>
     </group>
 </menu>

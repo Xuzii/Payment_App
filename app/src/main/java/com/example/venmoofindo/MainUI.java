@@ -1,10 +1,13 @@
 package com.example.venmoofindo;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,12 +15,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-public class MainUI extends AppCompatActivity {
+import com.google.android.material.navigation.NavigationView;
+
+public class MainUI extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private Button send_money_button;
     private Button request_money_button;
     private TextView greeting;
     private DrawerLayout drawer;
+
+    // menu items
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,7 @@ public class MainUI extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
         setContentView(R.layout.app_bar_main);
+        setNavigationViewListener();
 
         greeting = (TextView)findViewById(R.id.greeting);
 
@@ -53,8 +61,12 @@ public class MainUI extends AppCompatActivity {
             drawer.addDrawerListener(toggle);
             toggle.syncState();
         }
+    }
 
-
+    private void setNavigationViewListener() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        View hView =  navigationView.getHeaderView(0);
+        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
@@ -66,6 +78,23 @@ public class MainUI extends AppCompatActivity {
         else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        // Handle navigation view item clicks here.
+        Intent intent;
+        switch (item.getItemId()) {
+
+            case R.id.account_info: {
+                intent = new Intent(this, AccountInformation.class);
+                startActivity(intent);
+                break;
+            }
+        }
+        //close navigation drawer
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     private void sendMoneyUI() {

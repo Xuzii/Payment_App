@@ -40,23 +40,23 @@
             android:paddingTop="20dp"
             android:text="Bank Name"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Enter_name"
+            app:layout_constraintBottom_toTopOf="@+id/Enter_bank_name"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_up_title" />
+            app:layout_constraintTop_toBottomOf="@+id/bank_title" />
 
         <EditText
             android:id="@+id/Enter_bank_name"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
             android:hint="Bank Name"
+            android:inputType="text"
             android:translationX="40px"
-            app:layout_constraintBottom_toTopOf="@+id/lastName"
+            app:layout_constraintBottom_toTopOf="@+id/Account_number"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/firstName" />
+            app:layout_constraintTop_toBottomOf="@+id/bank_name" />
 
         <TextView
             android:id="@+id/Account_number"
@@ -66,23 +66,23 @@
             android:paddingTop="20dp"
             android:text="Account Number"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Enter_lastName"
+            app:layout_constraintBottom_toTopOf="@+id/Enter_account_number"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/Enter_name" />
+            app:layout_constraintTop_toBottomOf="@+id/Enter_bank_name" />
 
         <EditText
             android:id="@+id/Enter_account_number"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
             android:hint="Account Number"
+            android:inputType="text"
             android:translationX="40px"
-            app:layout_constraintBottom_toTopOf="@+id/email_label"
+            app:layout_constraintBottom_toTopOf="@+id/Routing_number"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/lastName" />
+            app:layout_constraintTop_toBottomOf="@+id/Account_number" />
 
         <TextView
             android:id="@+id/Routing_number"
@@ -92,23 +92,23 @@
             android:paddingTop="20dp"
             android:text="Routing Number"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Enter_email"
+            app:layout_constraintBottom_toTopOf="@+id/Enter_account_number"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/Enter_lastName" />
+            app:layout_constraintTop_toBottomOf="@+id/Enter_routing_number" />
 
         <EditText
             android:id="@+id/Enter_routing_number"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
             android:hint="Routing Number"
+            android:inputType="text"
             android:translationX="40px"
-            app:layout_constraintBottom_toTopOf="@+id/phone_label"
+            app:layout_constraintBottom_toTopOf="@+id/next_button"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_label" />
+            app:layout_constraintTop_toBottomOf="@+id/Routing_number" />
 
 
         <Button
@@ -121,17 +121,16 @@
             android:background="@drawable/rounded_edges"
             android:backgroundTint="@color/colorPrimary"
             android:text="Next"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/Enter_phone" />
+            app:layout_constraintTop_toBottomOf="@+id/Enter_routing_number" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:text="Already have an account? \n Log in here"
+            android:text="Review our private policy here"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@+id/parent"
             app:layout_constraintEnd_toEndOf="@+id/parent"
@@ -152,5 +151,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="3"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

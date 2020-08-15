@@ -10,13 +10,13 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="175dp"
-        android:background="@drawable/side_nav_bar"
+        android:background="@drawable/gradient_background_reverse"
         android:gravity="bottom"
-        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
         android:text="Send Money"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#FFFFFF"
-        android:paddingLeft="80dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -80,7 +80,6 @@
         android:id="@+id/description_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="140dp"
         android:text="Enter a description"
         android:textStyle="bold"
@@ -126,7 +125,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/send" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

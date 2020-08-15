@@ -62,6 +62,7 @@ public class ListOfUsers {
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
+                        Log.i("TEST" , "" + response);
                         // Check the length of our response (to see if the user has any repos)
                         if (response.length() > 0) {
                             // The user does have repos, so let's loop through them all.
@@ -91,6 +92,7 @@ public class ListOfUsers {
                     public void onErrorResponse(VolleyError error) {
                         // If there a HTTP error then add a note to our repo list.
                         setUserListText("Error while calling REST API");
+                        Log.e("Volley", "status code " + error.networkResponse.statusCode);
                         Log.e("Volley", error.toString());
                     }
                 }

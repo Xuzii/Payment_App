@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gradient_background"
+    tools:context=".Login">
 
 
     <LinearLayout
@@ -88,16 +89,16 @@
             android:id="@+id/login_button"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="80px"
             android:background="@drawable/rounded_edges"
             android:backgroundTint="@color/colorPrimary"
-            android:layout_gravity="end"
-            android:layout_marginRight="80px"
-            android:layout_marginTop="30px"
             android:text="Login"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/parent"
             app:layout_constraintStart_toStartOf="@+id/parent"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/Enter_password"/>
+            app:layout_constraintTop_toBottomOf="@+id/Enter_password" />
 
         <TextView
             android:id="@+id/textView5"

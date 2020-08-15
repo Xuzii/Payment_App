@@ -22,17 +22,74 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/UpdateBank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
         android:clickable="true"
+        android:drawableEnd="@drawable/arrow"
         android:focusable="true"
         android:text="Update Bank Information"
-        android:textSize="24sp"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <Button
+        android:id="@+id/privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
+        android:clickable="true"
+        android:drawableEnd="@drawable/arrow"
+        android:focusable="true"
+        android:text="Privacy Policy"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/UpdateBank" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:drawableEnd="@drawable/arrow"
+        android:focusable="true"
+        android:text="Help"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/privacy_policy" />
+
+    <Button
+        android:id="@+id/Delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
+        android:clickable="true"
+        android:drawableEnd="@drawable/arrow"
+        android:focusable="true"
+        android:text="Delete account"
+        android:textAlignment="textStart"
+        android:textColor="#C83C3C"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/help" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

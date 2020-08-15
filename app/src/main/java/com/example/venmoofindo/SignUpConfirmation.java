@@ -54,7 +54,7 @@ public class SignUpConfirmation extends AppCompatActivity {
                 error -> Log.e("AuthQuickstart", error.toString())
         );
         if (confirmation.get()) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), MainUI.class);
             startActivity(intent);
         } else {
             //TODO: NOT CORRECT

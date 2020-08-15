@@ -64,7 +64,7 @@ public class SignUp2 extends AppCompatActivity {
     }
 
     private void enterMainUI(){
-        Intent intent = new Intent(this, MainUI.class);
+        Intent intent = new Intent(this, SignUpConfirmation.class);
         startActivity(intent);
     }
 }

@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
-        android:layout_height="175dp"
+        android:layout_height="120dp"
         android:background="@drawable/gradient_background_reverse"
         android:gravity="bottom"
         android:paddingLeft="20dp"
@@ -27,7 +27,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:text="Enter recipient username"
         android:textStyle="bold"
@@ -98,10 +98,30 @@
         android:ems="10"
         android:hint="Description"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/bank_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+    <TextView
+        android:id="@+id/bank_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:text="Select bank to transfer from"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/banks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionSend" />
+
+    <Spinner
+        android:id="@+id/banks"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
@@ -114,16 +134,7 @@
         android:text="Send"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionSend" />
-
-    <Spinner
-        android:id="@+id/banks"
-        android:layout_width="411dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/banks" />
 
     <ImageView
         android:id="@+id/imageView2"
